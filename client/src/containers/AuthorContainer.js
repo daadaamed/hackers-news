@@ -7,7 +7,7 @@ import {
 } from '../styles/StoriesContainerStyles';
 import { useInfiniteScroll } from '../hooks/useInfiniteScroll';
 
-export const StoriesContainer = () => {
+export const AuthorContainer = () => {
   const { count } = useInfiniteScroll();
   const [storyIds, setStoryIds] = useState([]);
 

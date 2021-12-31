@@ -3,7 +3,6 @@ const bodyParser = require('body-parser')
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-
 import storyRoutes from './routes/story.js';
 
 const app = express();

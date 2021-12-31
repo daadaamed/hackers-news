@@ -5,7 +5,8 @@ const storySchema = mongoose.Schema({
     id: Number,
     by: String,
     score: Number,
-    time: TimeRanges
+    time: TimeRanges,
+
 })
 
 var Story = mongoose.model('Story', storySchema);

@@ -1,21 +1,12 @@
 import { StoriesContainer } from './containers/StoriesContainer';
-
-// export const App = () => <StoriesContainer />;
-
-
 import React, { useState } from "react";
-// import "./App.css";
-
+import "./App.css";
 import NavBar from "./components/NavBar.js";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import TopAuthors from "./components/TopAuthors";
 
 function App() {
   const [searching, setSearching] = useState("");
- 
-  
-
-
   return (
     <div className="App">
     <NavBar />
@@ -35,7 +26,17 @@ function App() {
             path="/TopAuthors"
             render={() => (
                 <div>
-                  <TopAuthors />
+                <SearchAuthor
+                  handleSearch={(e) => setSearching(e.target.value)}
+                />
+                  <TopAuthors
+                    by={by.filter(
+                    (choice) =>
+                    choice.by
+                    .toLowerCase()
+                    .includes(searching.toLowerCase())
+                                      )}
+                  />
                 </div>
               )}
           />

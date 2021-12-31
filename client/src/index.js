@@ -1,12 +1,4 @@
-// import React from 'react';
-// import { render } from 'react-dom';
-// import { App } from './App';
-// import * as serviceWorker from './serviceWorker';
-
-// render(<App />, document.getElementById('root'));
-
-
-
+import * as serviceWorker from './serviceWorker';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
@@ -17,4 +9,4 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-// serviceWorker.register();
+serviceWorker.register();
