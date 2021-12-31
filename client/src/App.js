@@ -11,17 +11,15 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import TopAuthors from "./components/TopAuthors";
 
 function App() {
-//   const [searching, setSearching] = useState("");
+  const [searching, setSearching] = useState("");
  
   
-//   const addMovie = (movieEl) => {
-//     setMovies([...movies, movieEl]);
-//   };
+
 
   return (
     <div className="App">
     <NavBar />
-      {/* <BrowserRouter> */}
+      <BrowserRouter>
         <Switch>
           <Route
             exact
@@ -35,15 +33,14 @@ function App() {
           <Route
             exact
             path="/TopAuthors"
-            // render={(props) => <MovieInfo items={movies}{...props} />} 
             render={() => (
                 <div>
-                  {/* <TopAuthors /> */}
+                  <TopAuthors />
                 </div>
               )}
           />
         </Switch>
-      {/* </BrowserRouter> */}
+      </BrowserRouter>
     </div>
   );
 }
